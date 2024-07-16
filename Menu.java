@@ -81,6 +81,27 @@ public class Menu {
         // popoliamo l'array list dei secondi
         //LISTA DEI DESSERT
 
+        // -- Tiramisù
+        ArrayList<Piatto> dessertPiatti = new ArrayList<Piatto>();
+        ingredienti = new ArrayList<>(Arrays.asList("Savoiardi", "caffè","mascarpone","uovo","zucchero","cacao in polvere","marsala"));
+        allergeni = new ArrayList<>(Arrays.asList("Glutine","uova","latticini"));
+        dessertPiatti.add(new Piatto("D0","Tiramisù", ingredienti, allergeni, 30, 6.0 ));
+
+         // -- Panna Cotta ai frutti di bosco 
+         ingredienti = new ArrayList<>(Arrays.asList("Panna fresca", "zucchero","vaniglia","gelatina","frutti di bosco (lamponi, mirtilli, fragole)","zucchero a velo"));
+         allergeni = new ArrayList<>(Arrays.asList("latticini"));
+         dessertPiatti.add(new Piatto("D1","Panna Cotta ai Frutti di Bosco", ingredienti, allergeni, 10, 5.5 ));
+
+         // -- Cannoli Siciliani
+         ingredienti = new ArrayList<>(Arrays.asList("Ricotta di pecora", "zucchero","cannoli (farina, zucchero, strutto, vino bianco)","cioccolato fondente","frutta candita","frutta a guscio","pistacchi"));
+         allergeni = new ArrayList<>(Arrays.asList(" Glutine","latticini","frutta a guscio"));
+         dessertPiatti.add(new Piatto("D2","Cannoli Siciliani", ingredienti, allergeni, 20, 7.0 ));
+
+         // -- Cheesecake al Limone
+         ingredienti = new ArrayList<>(Arrays.asList("Biscotti digestive", " burro","formaggio cremoso","cioccolato fondente","zucchero","panna"," limone","gelatina"));
+         allergeni = new ArrayList<>(Arrays.asList("Glutine","latticini"));
+         dessertPiatti.add(new Piatto("D3","Cheesecake al Limone", ingredienti, allergeni, 5, 6.5 ));
+
     }
     /**
      * Restituisce un istanza del piatto
