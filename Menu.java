@@ -34,6 +34,27 @@ public class Menu {
 
         //LISTA DEI PRIMI
         
+        ArrayList<Piatto> primiPiatti = new ArrayList<Piatto>();
+        
+        // -- Spaghetti alla Carbonara
+        ingredienti = new ArrayList<>(Arrays.asList("Spaghetti", "uova", "pancetta", "pecorino romano", "pepe nero"));
+        allergeni = new ArrayList<>(Arrays.asList("Glutine", "Uova", "Latticini"));
+        primiPiatti.add(new Piatto("P0", "Spaghetti alla Carbonara", ingredienti, allergeni, 15, 10.0));
+        // -- Risotto ai Funghi Porcini
+        ingredienti = new ArrayList<>(Arrays.asList("Riso carnaroli", "funghi porcini", "burro", "parmigiano reggiano", "brodo vegetale", "cipolla", "vino bianco", "prezzemolo", "sale", "pepe"));
+        allergeni = new ArrayList<>(Arrays.asList("Latticini"));
+        primiPiatti.add(new Piatto("P1", "Risotto ai Funghi Porcini", ingredienti, allergeni, 20, 13.0));
+        // -- Lasagna alla Bolognese
+        ingredienti = new ArrayList<>(Arrays.asList("Sfoglie di pasta all'uovo", "ragù alla bolognese (carne di manzo, carne di maiale, pomodori, carote, cipolle, sedano, vino rosso)", "besciamella (latte, burro, farina)", "parmigiano reggiano"));
+        allergeni = new ArrayList<>(Arrays.asList("Latticini", "Glutine", "Uova"));
+        primiPiatti.add(new Piatto("P2", "Lasagna alla Bolognese", ingredienti, allergeni, 20, 12.50));
+        // -- Penne all'Arrabbiata
+        ingredienti = new ArrayList<>(Arrays.asList("Penne rigate", "pomodori pelati", "aglio", "peperoncino", "olio extravergine di oliva", "prezzemolo", "sale"));
+        allergeni = new ArrayList<>(Arrays.asList("Glutine"));
+        primiPiatti.add(new Piatto("P3", "Penne all'Arrabbiata", ingredienti, allergeni, 10, 8.50));
+        // ---
+        Categoria primi = new Categoria("P", "Primi", primiPiatti);
+
 
         //LISTA DEI SECONDI
 
