@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.ArrayList;
 
 public class Piatto {
     public String Id;
@@ -16,7 +17,7 @@ public class Piatto {
      * @param TempoStimato
      * @param Prezzo
      */
-    public Piatto(String Id, String Nome, List<String> Ingrediendi, List<String> Allergeni, Integer TempoStimato, Double Prezzo) {
+    public Piatto(String Id, String Nome, ArrayList<String> Ingrediendi, ArrayList<String> Allergeni, Integer TempoStimato, Double Prezzo) {
         this.Id = Id;
         this.Nome = Nome;
         this.Ingredienti = Ingrediendi;
