@@ -75,7 +75,7 @@ public class Menu {
         // -- Melanzane alla Parmigiana
         ingredienti = new ArrayList<>(Arrays.asList("Melanzane", "passata di pomodoro", "mozzarella", "parmigiano reggiano", "basilico", "olio extravergine di oliva", "sale", "pepe"));
         allergeni = new ArrayList<>(Arrays.asList("Latticini"));
-        antipastiPiatti.add(new Piatto("S3", "Melanzane alla parmigiana", ingredienti, allergeni, 18, 13.0));
+        secondiPiatti.add(new Piatto("S3", "Melanzane alla parmigiana", ingredienti, allergeni, 18, 13.0));
         // ---
         Categoria secondi = new Categoria("S", "Secondi", secondiPiatti);
         // popoliamo l'array list dei secondi
