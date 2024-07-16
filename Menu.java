@@ -37,6 +37,27 @@ public class Menu {
 
         //LISTA DEI SECONDI
 
+        ArrayList<Piatto> secondiPiatti = new ArrayList<Piatto>();
+        // popoliamo l'array list dei secondi
+        // -- Filetto di Manzo al Pepe Verde
+        ingredienti = new ArrayList<>(Arrays.asList("Filetto di manzo", "panna fresca", "brodo di carne", "pepe verde", "brandy", "burro", "sale"));
+        allergeni = new ArrayList<>(Arrays.asList("Latticini"));
+        secondiPiatti.add(new Piatto("S0", "Filetto di Manzo al Pepe Verde", ingredienti, allergeni, 15, 20.0));
+        // -- Pollo alla Cacciatora
+        ingredienti = new ArrayList<>(Arrays.asList("Pollo", "pomodori", "cipolla", "carote", "sedano", "olive nere", "vino rosso", "rosmarino", "aglio", "olio", "extravergine di oliva", "sale", "pepe"));
+        allergeni = new ArrayList<>(Arrays.asList(""));
+        secondiPiatti.add(new Piatto("S1", "Pollo alla Cacciatora", ingredienti, allergeni, 25, 14.50));
+        // -- Salmone alla Griglia
+        ingredienti = new ArrayList<>(Arrays.asList("Salmone fresco", "limone","olio extravergine di oliva", "sale", "pepe", "aneto"));
+        allergeni = new ArrayList<>(Arrays.asList("Pesce"));
+        secondiPiatti.add(new Piatto("S2", "Salmone alla Griglia", ingredienti, allergeni, 14, 18.0));
+        // -- Melanzane alla Parmigiana
+        ingredienti = new ArrayList<>(Arrays.asList("Melanzane", "passata di pomodoro", "mozzarella", "parmigiano reggiano", "basilico", "olio extravergine di oliva", "sale", "pepe"));
+        allergeni = new ArrayList<>(Arrays.asList("Latticini"));
+        antipastiPiatti.add(new Piatto("S3", "Melanzane alla parmigiana", ingredienti, allergeni, 18, 13.0));
+        // ---
+        Categoria secondi = new Categoria("S", "Secondi", secondiPiatti);
+        // popoliamo l'array list dei secondi
         //LISTA DEI DESSERT
 
     }
