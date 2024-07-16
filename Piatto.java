@@ -25,6 +25,9 @@ public class Piatto {
         this.TempoStimato = TempoStimato;
         this.Prezzo = Prezzo;
     }
+    public Piatto() {
+        //TODO Auto-generated constructor stub
+    }
     /**
      * Stampa i dettagli relativi al piatto
      * @return dettagli
