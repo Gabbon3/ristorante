@@ -32,12 +32,7 @@ public class Menu {
         Categoria antipasti = new Categoria("A", "Antipasti", antipastiPiatti);
         // popoliamo l'array list dei primi
 
-        //LISTA DEI PRIMI
-
-        //LISTA DEI SECONDI
-
-        //LISTA DEI DESSERT
-
+        
     }
     /**
      * Restituisce un istanza del piatto
