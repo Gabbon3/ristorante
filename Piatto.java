@@ -33,7 +33,7 @@ public class Piatto {
      * @return dettagli
      */
     public String stampaDettagli() {
-        String dettagli = "Dettagli del piatto " + this.Nome + " (ID " + this.Id + ")";
+        String dettagli = "Dettagli del piatto " + this.Nome + " (ID " + this.Id + ")\n";
         // -- Ingredienti
         dettagli += " - Ingredienti: ";
         dettagli += String.join(", ", this.Ingredienti) + "\n";

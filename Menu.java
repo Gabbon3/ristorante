@@ -9,6 +9,7 @@ public class Menu {
     public Menu() {
         this.init();
     }
+
     /**
      * Inizializza il menu popolando gli array delle categorie e dei piatti
      */
@@ -132,6 +133,51 @@ public class Menu {
         this.Categorie.add(dessert); // 3
     }
 
+    public int getIndexCategoria(String idCategoria) {
+        int index = -1;
+        switch (idCategoria) {
+            case "A":
+                index = 0; // antipasti alla posizione 0
+                break;
+            case "P":
+                index = 1; // primi alla posizione 1
+                break;
+            case "S":
+                index = 2; // secondi alla posizione 2
+                break;
+            case "D":
+                index = 3; // dessert alla posizione 3
+                break;
+        }
+        return index;
+    }
+
+    /**
+     * 
+     * @param idCategoria
+     */
+    public void dettagliCategoria(String idCategoria) {
+        int indexCategoria = this.getIndexCategoria(idCategoria);
+        if (indexCategoria == -1) {
+            System.out.println("Categoria non trovata.");
+            return;
+        }
+        Categoria categoria = this.Categorie.get(indexCategoria);
+        for (int i = 0; i < categoria.Piatti.size(); i++) {
+            Piatto piatto = categoria.Piatti.get(i);
+            System.out.println(" - " + piatto.Id + " " + piatto.Nome + ", " + piatto.Prezzo + "\u20ac \n");
+        }
+    }
+
+    public void dettagliPiatto(String idPiatto) {
+        Piatto piatto = this.getPiatto(idPiatto);
+        if (piatto == null) {
+            System.out.println("Piatto non trovato.");
+        } else {
+            System.out.println(piatto.stampaDettagli());
+        }
+    }
+
     /**
      * Restituisce un istanza del piatto
      * 
@@ -139,35 +185,20 @@ public class Menu {
      * @return
      */
     public Piatto getPiatto(String IdPiatto) {
-        String[] parts = IdPiatto.split("");
-        // ---
-        String idCategoriaStringa = parts[0];
-        int idPiatto = Integer.parseInt(parts[1]);
-        // ---
-        int idCategoria = -1;
-        switch (idCategoriaStringa) {
-            case "A":
-                idCategoria = 0; // antipasti alla posizione 0
-                break;
-            case "P":
-                idCategoria = 1; // primi alla posizione 1
-                break;
-            case "S":
-                idCategoria = 2; // secondi alla posizione 2
-                break;
-            case "D":
-                idCategoria = 3; // dessert alla posizione 3
-                break;
+        try {
+            String[] parts = IdPiatto.split("");
+            // ---
+            String idCategoriaStringa = parts[0];
+            int idPiatto = Integer.parseInt(parts[1]);
+            // ---
+            int idCategoria = this.getIndexCategoria(idCategoriaStringa);
+            // ---
+            Categoria categoria = this.Categorie.get(idCategoria);
+            Piatto piatto = categoria.Piatti.get(idPiatto);
+            // ---
+            return piatto;
+        } catch (Exception e) {
+            return null;
         }
-        // ---
-        Categoria categoria = this.Categorie.get(idCategoria);
-        Piatto piatto = categoria.Piatti.get(idPiatto);
-        // ---
-        return piatto;
-    }
-
-    public static void main(String[] args) {
-        Menu menu = new Menu();
-        System.out.println(menu.getPiatto("A1").stampaDettagli());
     }
 }
