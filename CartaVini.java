@@ -38,8 +38,12 @@ public class CartaVini {
         viniRossi.add(new Vino("Primitivo di Manduria", "RO3", "2019", "Abruzzo, Italia", piattiConsigliati, 25.0, "Rosso corposo"));
         //LISTA DEI ROSATI
         ArrayList<Vino> viniRosati = new ArrayList<Vino>();
-        piattiConsigliati = new ArrayList<>(Arrays.asList("P0", "S0", "S1"));
-        viniRosati.add(new Vino("Primitivo di Manduria", "RO3", "2019", "Abruzzo, Italia", piattiConsigliati, 25.0, "Rosso corposo"));
-
+        //Cerasuolo d'Abruzzo
+        piattiConsigliati = new ArrayList<>(Arrays.asList("A0", "A1", "A2"));
+        viniRosati.add(new Vino("Cerasuolo d'Abruzzo", "RS0", "2022", "Abruzzo, Italia", piattiConsigliati, 18.0, "Rosato fruttato"));
+        //Bardolino Chiaretto
+        
+        piattiConsigliati = new ArrayList<>(Arrays.asList("P3", "P1", "A3"));
+        viniRosati.add(new Vino("Bardolino Chiaretto", "RS1", "2021", "Veneto, Italia", piattiConsigliati, 20.0, "Rosato leggero"));
     }
 }
